@@ -177,7 +177,7 @@ func statsByPkg(stats []stat) map[string][]stat {
 		if _, ok := pkgStats[s.PkgName]; ok {
 			pkgStats[s.PkgName] = append(pkgStats[s.PkgName], s)
 		} else {
-			pkgStats[s.PkgName] = []stat{}
+			pkgStats[s.PkgName] = []stat{s}
 		}
 	}
 	return pkgStats
